@@ -1,3 +1,9 @@
+"""
+author ayaz wani
+modular code to convert xml files into csv
+
+
+"""
 import xml.etree.ElementTree as ET
 import csv,glob
 
@@ -88,12 +94,6 @@ def get_location_country(root):
 		return("NA")
 
 
-#filename = "NCT00571389.xml"
-
-
-
-#print(root)
-
 data = []
 testdata = open('comb.csv', 'w')
 csvwriter = csv.writer(testdata)
@@ -124,7 +124,3 @@ for filename in glob.iglob(data_folder+"/*.xml"):
 testdata.close()
 
 
-# tree = ET.parse(filename)
-# root = tree.getroot()
-
-# print(get_eligibility_sampling)
